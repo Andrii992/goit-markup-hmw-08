@@ -189,11 +189,14 @@ img {
   transition: -webkit-box-shadow var(--duration) var(--timing-function);
   transition: box-shadow var(--duration) var(--timing-function);
   transition: box-shadow var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+  -webkit-transition: background-color var(--duration) var(--timing-function);
+  transition: background-color var(--duration) var(--timing-function);
 }
 
 .button:hover, .button:focus {
-  -webkit-box-shadow: 0 0 10px var(--accent-color);
-          box-shadow: 0 0 10px var(--accent-color);
+  background-color: #188CE8;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .socials {
@@ -397,20 +400,16 @@ img {
   outline: 2px solid var(--heading-color);
   outline-offset: -2px;
   border-radius: 2px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-right: 7px;
-  -webkit-transition: outline var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), -webkit-filter var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
-  transition: outline var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), -webkit-filter var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
-  transition: outline var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), filter var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function);
-  transition: outline var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), filter var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function), -webkit-filter var(--duration) var(--timing-function), -webkit-box-shadow var(--duration) var(--timing-function);
+  -webkit-transition: outline var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), -webkit-filter var(--duration) var(--timing-function);
+  transition: outline var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), -webkit-filter var(--duration) var(--timing-function);
+  transition: outline var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), filter var(--duration) var(--timing-function);
+  transition: outline var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), filter var(--duration) var(--timing-function), -webkit-filter var(--duration) var(--timing-function);
 }
 
 .license__input:checked + .license__icon {
   background-color: var(--accent-color);
   outline: transparent;
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .license__image {
@@ -433,6 +432,10 @@ img {
 .license__link {
   color: var(--accent-color);
   text-decoration: underline;
+}
+
+.license__label:focus + .license__icon {
+  outline: 2px solid var(--accent-color);
 }
 
 /* *********************************************** MAIN-HEADER *********************************************** */
@@ -1674,7 +1677,6 @@ img {
 }
 
 .main-list-t__link--current {
-  color: var(--accent-color);
   position: relative;
 }
 
